@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NeuroStrike</title>
+
+    <meta name="description" content="NeuroStrike — Explore Brain-Computer Interfaces, AI ethics, and the future of neural technology.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NEURAL BACKGROUND ================= -->
+    <canvas id="network"></canvas>
+
+    <!-- ================= CURSOR EFFECTS ================= -->
+    <div class="cursor-glow"></div>
+    <canvas id="cursorParticles"></canvas>
+
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-brain">🧠</div>
+            <h1>NeuroStrike</h1>
+            <p id="loadingText">Initializing Neural Network...</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= NAV ================= -->
+    <nav>
+        <div class="logo">NeuroStrike</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#bcis">BCIs</a></li>
+            <li><a href="#signal">How it Works</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div class="theme-toggle" id="themeToggle">🌙</div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <main class="hero" id="home">
+
+        <div class="brain-container">
+            <svg class="brain-svg" viewBox="0 0 500 500">
+                <path class="brain-outline"
+                    d="M160 120
+                    C120 120 90 170 110 210
+                    C70 250 90 320 150 330
+                    C170 380 250 390 250 350
+                    C250 390 330 380 350 330
+                    C410 320 430 250 390 210
+                    C410 170 380 120 340 120
+                    C310 80 190 80 160 120"
+                    fill="none" />
+            </svg>
+        </div>
+
+        <h1>NeuroStrike</h1>
+        <h2>Can AI Read Your Mind?</h2>
+
+        <p>
+            Explore the science.<br>
+            Understand the ethics.<br>
+            Shape the future.
+        </p>
+
+        <button id="startBtn">Start Exploring →</button>
+    </main>
+
+    <!-- ================= BCI ================= -->
+    <section id="bcis" class="section">
+        <h2>🧠 What is a Brain-Computer Interface?</h2>
+        <p>
+            A Brain-Computer Interface (BCI) creates a direct communication pathway between the brain and external devices.
+            It enables communication, movement restoration, and new forms of human-computer interaction.
+        </p>
+    </section>
+
+    <!-- ================= SIGNAL ================= -->
+    <section id="signal" class="section">
+
+        <h2>How Does a BCI Work?</h2>
+
+        <div class="signal-container">
+            <div class="brain-icon">🧠</div>
+            <div class="signal"></div>
+            <div class="computer-icon">💻</div>
+        </div>
+
+        <p>
+            Brain signals are detected, decoded using AI models, and translated into computer commands.
+        </p>
+
+    </section>
+
+    <!-- ================= MYTHS ================= -->
+    <section id="myths" class="section">
+
+        <h2>Myth vs Fact</h2>
+
+        <div class="cards">
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <h3>❌ MYTH</h3>
+                        <p>BCIs can read every thought.</p>
+                        <span>Click</span>
+                    </div>
+                    <div class="flip-back">
+                        <h3>✅ FACT</h3>
+                        <p>They only decode specific neural signals, not full thoughts.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <h3>❌ MYTH</h3>
+                        <p>BCIs = mind control.</p>
+                        <span>Click</span>
+                    </div>
+                    <div class="flip-back">
+                        <h3>✅ FACT</h3>
+                        <p>They assist communication and mobility, not control minds.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= BIAS ================= -->
+    <section id="bias" class="section">
+
+        <h2>AI Bias Simulator</h2>
+
+        <p>Adjust training diversity to see model behavior changes.</p>
+
+        <div class="bias-box">
+
+            <h3>Training Data Diversity</h3>
+
+            <input type="range" min="0" max="100" value="100" id="biasSlider">
+
+            <h1 id="accuracy">Accuracy: 98%</h1>
+
+            <p id="biasText">
+                The model performs well across diverse populations.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TIMELINE ================= -->
+    <section id="timeline" class="section">
+
+        <h2>History of BCIs</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-progress"></div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>1924</h3>
+                    <p>First EEG recorded by Hans Berger.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>1973</h3>
+                    <p>BCI concept formally introduced.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2004</h3>
+                    <p>First real-time BCI communication systems.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2024</h3>
+                    <p>Human neural implant trials begin.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Future</h3>
+                    <p>Ethical BCIs reshape medicine and communication.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+<section id="about" class="section">
+
+    <h2>Behind NeuroStrike</h2>
+
+    <div class="about-card">
+
+        <div class="about-icon">🧠</div>
+
+        <header class="about-header">
+
+            <h3 class="glitch-name" data-text="Nero">Nero</h3>
+
+            <p class="about-intro">
+                Curious human.<br>
+                Occasional coder.<br>
+                Chronic "wait... but what if?" thinker. 👋
+            </p>
+
+        </header>
+
+        <div class="about-body">
+
+            <p>
+                Hi! I'm Nero.
+            </p>
+
+            <p>
+                NeuroStrike started because I kept asking way too many questions about AI,
+                the human brain, and where the line between science fiction and reality actually is.
+                Instead of keeping those questions to myself... I built this. 👀
+            </p>
+
+            <p>
+                I'm fascinated by Brain–Computer Interfaces, AI, and neuroethics,
+                but I also believe these conversations shouldn't be locked away in research papers.
+                If a website can make someone pause and think,
+                <em>"Wait... that's actually really cool,"</em>
+                then it's done its job.
+            </p>
+
+            <p>
+                When I'm not debugging code for the fifth time 🙃,
+                you'll probably find me reading papers,
+                filling notebooks with random ideas,
+                or accidentally opening seventeen browser tabs because one question led to another.
+            </p>
+
+            <p>
+                Thanks for stopping by.
+                Hope you leave with a few new questions...
+                because that's usually where the fun starts. 🧠✨
+            </p>
+
+        </div>
+
+        <div class="contact-buttons">
+
+            <a href="mailto:iamnero6769@gmail.com" class="contact-btn">
+                💬 Leave a thought
+            </a>
+
+            <a href="https://orcid.org/0009-0000-3509-0796"
+               target="_blank"
+               class="contact-btn">
+                📚 Dive into the research
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- ================= SCRIPT ================= -->
+    <script src="script.js"></script>
+
+</body>
+</html>
